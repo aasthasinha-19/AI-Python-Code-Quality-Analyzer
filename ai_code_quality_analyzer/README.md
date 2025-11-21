@@ -62,7 +62,7 @@ ai_code_quality_analyzer/
 
 🚀 Getting Started (Local Setup)
 1️⃣ Clone the Repository
-git clone https://github.com/YOUR_USERNAME/ai_code_quality_analyzer.git
+git clone https://github.com/aasthasinha-19/ai_code_quality_analyzer.git
 cd ai_code_quality_analyzer
 
 2️⃣ Create Virtual Environment
