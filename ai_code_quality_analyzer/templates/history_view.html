@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>History Entry — AI Code Quality Analyzer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container page">
+    <a class="btn small" href="{{ url_for('history') }}">&larr; Back</a>
+    <h1>Analysis Detail</h1>
+    <section class="card">
+      <h3>Original Code</h3>
+      <pre class="resultbox">{{ r[3] }}</pre>
+      <h3>Complexity</h3>
+      <pre class="resultbox">{{ r[4] }}</pre>
+      <h3>Lint</h3>
+      <pre class="resultbox">{{ r[5] }}</pre>
+      <h3>AI Summary</h3>
+      <pre class="resultbox">{{ r[6] }}</pre>
+      <h3>Improved Code</h3>
+      <textarea class="copybox" readonly>{{ r[7] }}</textarea>
+    </section>
+    <footer class="foot">
+      <small>Use the improved code in your editor (copy & paste)</small>
+    </footer>
+  </div>
+</body>
+</html>

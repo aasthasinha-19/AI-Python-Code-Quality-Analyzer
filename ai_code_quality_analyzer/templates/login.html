@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login — AI Code Quality Analyzer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="auth-screen">
+    <section class="auth-card">
+      <header class="auth-head">
+        <h1 class="brand">AI Code Quality Analyzer</h1>
+        <p class="tag">Sign in to run analyses, save history and download reports</p>
+      </header>
+      {% if error %}
+        <div class="alert error">{{ error }}</div>
+      {% endif %}
+      <form method="POST" class="auth-form">
+        <label class="label">Email</label>
+        <input type="email" name="email" class="input-box" placeholder="you@company.com" required>
+        <label class="label">Password</label>
+        <input type="password" name="password" class="input-box" placeholder="••••••••" required>
+        <div class="form-row">
+          <button class="btn primary" type="submit">Login</button>
+          <a class="link" href="{{ url_for('register') }}">Create account</a>
+        </div>
+      </form>
+
+    </section>
+  </main>
+</body>
+</html>

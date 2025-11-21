@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Analyzer — AI Python Code Quality Analyzer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container page">
+
+    <!-- Top Navigation -->
+      <header class="top-bar">
+  <div>
+    <span class="welcome">Welcome, {{ session.user }} 👋</span>
+  </div>
+
+  <div class="nav-actions">
+    <a class="history-btn" href="{{ url_for('history') }}">History</a>
+    <a class="logout-btn" href="{{ url_for('logout') }}">Logout</a>
+  </div>
+</header>
+
+    <h1>AI Python Code Quality Analyzer</h1>
+    <p class="lead">Paste Python code below to get complexity, linting, AI summary and an improved version.</p>
+
+
+    <!-- MAIN ANALYSIS FORM -->
+    <section class="card">
+      <form method="POST" action="{{ url_for('analyze') }}">
+        <label class="label">Python code</label>
+
+        <textarea name="code" class="codebox" placeholder="# Paste your Python code here..." required>
+{% if original_code %}{{ original_code }}{% endif %}
+        </textarea>
+
+        <div class="form-row">
+          <button class="btn primary" type="submit">Analyze Code</button>
+        </div>
+      </form>
+    </section>
+
+
+    <!-- RESULTS SECTION -->
+    {% if results %}
+    <section class="card results">
+      <h2>Results</h2>
+
+      <div class="result-section">
+        <h3>Complexity / MI Score</h3>
+        <pre class="resultbox">{{ results.complexity }}</pre>
+      </div>
+
+      <div class="result-section">
+        <h3>Linting Report</h3>
+        <pre class="resultbox">{{ results.lint }}</pre>
+      </div>
+
+      <div class="result-section">
+        <h3>AI Summary</h3>
+        <pre class="resultbox">{{ results.summary }}</pre>
+      </div>
+
+      <div class="result-section">
+        <h3>Improved Code</h3>
+        <textarea class="copybox" readonly>{{ results.improved }}</textarea>
+        <p class="note">Tip: Select the text above and press <strong>Ctrl+C</strong> to copy.</p>
+      </div>
+    </section>
+    {% endif %}
+
+  </div>
+</body>
+</html>

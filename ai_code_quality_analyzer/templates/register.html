@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Register — AI Code Quality Analyzer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="auth-screen">
+    <section class="auth-card">
+      <header class="auth-head">
+        <h1 class="brand">Create an account</h1>
+        <p class="tag">Register to start analyzing code and save history</p>
+      </header>
+      {% if error %}
+        <div class="alert error">{{ error }}</div>
+      {% endif %}
+      <form method="POST" class="auth-form">
+        <label class="label">Full name</label>
+        <input type="text" name="name" class="input-box" placeholder="Jane Doe" required>
+        <label class="label">Email</label>
+        <input type="email" name="email" class="input-box" placeholder="you@company.com" required>
+        <label class="label">Password</label>
+        <input type="password" name="password" class="input-box" placeholder="Create a secure password" required>
+        <div class="form-row">
+          <button class="btn primary" type="submit">Register</button>
+          <a class="link" href="{{ url_for('login') }}">Already have an account?</a>
+        </div>
+      </form>
+      <footer class="auth-foot">
+        <small>We store only hashed passwords — demo app</small>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
