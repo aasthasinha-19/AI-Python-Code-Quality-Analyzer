@@ -17,8 +17,6 @@ This is a powerful portfolio project designed for Data Science, Python Developer
 ✔ User History stored in SQLite
 ✔ Responsive UI (Mobile friendly)
 ✔ Modern clean UI with custom styling
-✔ Secure password hashing
-✔ Fully deployable to Render / Railway / PythonAnywhere
 ✔ Zero JS (pure HTML/CSS + Flask)
 
 🧠 Tech Stack
@@ -31,16 +29,9 @@ Static Analysis: Radon (Cyclomatic Complexity), Pylint
 
 AI Logic: Heuristic refactoring engine
 
-Security: Werkzeug password hashing
-
 Deployment: Gunicorn (for production), Render YAML
 
 UI: Pure HTML + CSS (no JavaScript!)
-
-📸 Screenshots
-🔐 Login Screen
-
-(You can upload more screenshots to GitHub later — e.g., dashboard, analyzer page, history page.)
 
 📂 Project Structure
 ai_code_quality_analyzer/
