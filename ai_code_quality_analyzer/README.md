@@ -2,8 +2,6 @@
 
 A fully featured web-based tool built with **Flask**, **NLP heuristics**, **Radon**, **Pylint**, and **SQLite** to analyze Python code for quality, complexity, lint issues, and generate improved refactored versions.
 
-This is a powerful portfolio project designed for **Data Science**, **Python Developer**, and **AI/ML Engineer** roles.
-
 ---
 
 # 🌟 Features
