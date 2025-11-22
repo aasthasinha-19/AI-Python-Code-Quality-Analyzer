@@ -1,7 +1,6 @@
 # 🚀 AI Code Quality Analyzer
 
 A fully featured web-based tool built with **Flask**, **NLP heuristics**, **Radon**, **Pylint**, and **SQLite** to analyze Python code for quality, complexity, lint issues, and generate improved refactored versions.
-
 ---
 
 # 🌟 Features
